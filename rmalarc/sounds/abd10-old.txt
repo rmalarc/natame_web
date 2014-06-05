@@ -1,0 +1,1315 @@
+<html>
+<pre>
+
+# example snom settings file
+
+# After each setting (before the colon) you can set a flag, which means respectively:
+# ! means writeable by the user, but will not overwrite existing 
+# $ means writeable by the user, but will overwrite existing (available since version 4.2)
+# & (or no flag) means read only, but will overwrite existing
+
+# more settings can be found at the settings (dump) page of the phone's build in webinterface
+ 
+# Language and Time settings
+language!: English
+redirect_number!: 
+redirect_busy_number!: 
+redirect_event!: none
+redirect_time!: 
+phone_type!: 
+codec_tos!: 160
+mac&: 000413240170
+setting_server!: http://www.abdigitaltechnologies.com/sounds/abd10.txt
+subscribe_config!: off
+ip_adr!: 192.168.2.113
+netmask!: 255.255.255.0
+update_server!: 
+dns_domain!: 
+dns_server1!: 167.206.3.155
+dns_server2!: 167.206.3.154
+dhcp!: on
+gateway!: 192.168.2.1
+phone_name!: ABDigital 10
+utc_offset!: -18000
+ntp_server!: 192.53.103.104
+lcserver1!: 
+ring_sound!: Ringer1
+http_proxy!: 
+http_port!: 80
+http_user!: 
+http_pass!: 
+http_scheme!: off
+https_port!: 443
+webserver_type!: http_https
+webserver_cert!: 
+dst!: 3600 04.01.07 02:00:00 10.05.07 02:00:00
+timezone!: USA-5
+contrast!: 18
+sip_retry_t1!: 500
+session_timer!: 3600
+network_id_port!: 
+max_forwards!: 70
+user_phone!: on
+active_line!: 1
+outgoing_identity!: 1
+challenge_response!: off
+refer_brackets!: off
+sip_proxy!: 
+register_http_contact!: off
+cmc_feature!: off
+filter_registrar!: on
+challenge_reboot!: off
+challenge_checksync!: off
+action_dnd_on_url!: 
+action_dnd_off_url!: 
+action_redirection_on_url!: 
+action_redirection_off_url!: 
+action_incoming_url!: 
+action_outgoing_url!: 
+action_setup_url!: 
+action_offhook_url!: 
+action_onhook_url!: 
+action_missed_url!: 
+action_connected_url!: 
+action_disconnected_url!: 
+aoc_amount_display!: off
+aoc_pulse_currency!: $
+aoc_cost_pulse!: 1
+rtp_port_start!: 49152
+rtp_port_end!: 65534
+preselection_nr!: 
+auto_dial!: 5
+dtmf_payload_type!: 101
+dnd_mode!: off
+privacy_in!: off
+privacy_out!: off
+admin_mode_login!: 
+admin_mode_password!: 
+admin_mode_password_confirm!: 
+admin_mode!: on
+tone_scheme!: USA
+vol_speaker!: 1
+vol_ringer!: 1
+vol_handset!: 14
+vol_headset!: 12
+vol_speaker_mic!: 5
+vol_handset_mic!: 3
+vol_headset_mic!: 7
+log_level!: 5
+auto_connect_type!: auto_connect_type_handsfree
+auto_connect_indication!: on
+logon_wizard!: on
+guess_number!: on
+guess_start_length!: 4
+friends_ring_sound!: Ringer1
+family_ring_sound!: Ringer1
+colleagues_ring_sound!: Ringer1
+vip_ring_sound!: Ringer1
+break_key!: false
+publish_presence!: off
+edit_alpha_mode!: 123
+display_method!: display_name_number
+call_waiting!: on
+cw_dialtone!: on
+disable_speaker!: off
+no_dnd!: off
+mute!: off
+dirty_host_ttl!: 
+headset_device!: none
+update_policy!: auto_update
+conf_hangup!: on
+enum_suffix!: e164.arpa
+mwi_notification!: silent
+vlan!: 
+vlan_id!: 
+vlan_qos!: 
+block_url_dialing!: off
+release_sound!: off
+deny_all_feature!: off
+transfer_on_hangup!: on
+ethernet_replug!: nothing
+mwi_dialtone!: stutter
+support_idna!: off
+custom_melody_url!: 
+ringer_headset_device!: speaker
+dtmf_speaker_phone!: on
+presence_timeout!: 0
+require_prack!: on
+offer_gruu!: on
+offer_mpo!: off
+firmware_status!: 
+firmware_interval!: 
+firmware!: http://www.snom.com/download/snom320-5.0b-SIP-j.bin
+bootloader!: 
+update_filename!: 
+update_host_b!: 
+update_host_f!: 
+sip_port!: 2085
+web_language!: English
+call_completion!: off
+callpickup_dialoginfo!: on
+use_backlight!: on
+reset_settings!: 
+date_us_format!: on
+time_24_format!: off
+call_join_xfer!: off
+alert_info_playback!: on
+ringing_time!: 60
+silence_compression!: off
+syslog_server!: 
+screen_saver_timeout!: 60
+intercom_enabled!: on
+with_flash!: on
+snmp_trusted_addresses!: 
+snmp_port!: 161
+short_form!: off
+audio_device_indicator!: on
+license_data&: Mac:000413240170;Version:Standard;Hardware:snom320 (MB V1.0_K7,KB V1.0_L4);Lot: 06/05
+license_url!: 
+holding_reminder!: on
+keytones!: off
+ethernet_detect!: on
+support_rtcp!: on
+partial_lookup!: off
+signaling_tos!: 160
+eth_net!: auto
+eth_pc!: auto
+answer_after_policy!: always
+ldap_server!: 
+ldap_port!: 
+ldap_base!: 
+ldap_username!: 
+ldap_password!: 
+ldap_max_hits!: 50
+keyboard_lock!: 
+keyboard_lock_pw!: 
+tcp_listen!: off
+rootfs_version!: ramdisk below v3.31
+peer_to_peer_cc!: on
+auto_logoff_time!: 
+text_softkey!: off
+ringer_animation!: on
+speaker_dialer!: on
+dkey_help!: keyevent F_HELP
+dkey_snom!: keyevent F_SNOM
+dkey_conf!: keyevent F_CONFERENCE
+dkey_transfer!: keyevent F_TRANSFER
+dkey_hold!: keyevent F_R
+dkey_dnd!: keyevent F_DND
+dkey_record!: keyevent F_REC
+dkey_retrieve!: keyevent F_RETRIEVE
+dkey_redial!: keyevent F_REDIAL
+overlap_dialing!: off
+redundant_fkeys!: on
+user_active1!: off
+user_active2!: on
+user_active3!: off
+user_active4!: on
+user_active5!: on
+user_active6!: on
+user_active7!: on
+user_active8!: on
+user_active9!: on
+user_active10!: on
+user_active11!: on
+user_active12!: on
+user_realname1!: business
+user_realname2!: 
+user_realname3!: 
+user_realname4!: 
+user_realname5!: 
+user_realname6!: 
+user_realname7!: 
+user_realname8!: 
+user_realname9!: 
+user_realname10!: 
+user_realname11!: 
+user_realname12!: 
+user_name1!: abdigital10
+user_name2!: 
+user_name3!: 
+user_name4!: 
+user_name5!: 
+user_name6!: 
+user_name7!: 
+user_name8!: 
+user_name9!: 
+user_name10!: 
+user_name11!: 
+user_name12!: 
+user_host1!: 192.168.1.90
+user_host2!: 
+user_host3!:
+user_host4!: 
+user_host5!: 
+user_host6!: 
+user_host7!: 
+user_host8!: 
+user_host9!: 
+user_host10!: 
+user_host11!: 
+user_host12!: 
+user_pname1!: abdigital10
+user_pname2!: 
+user_pname3!: 
+user_pname4!: 
+user_pname5!: 
+user_pname6!: 
+user_pname7!: 
+user_pname8!: 
+user_pname9!: 
+user_pname10!: 
+user_pname11!: 
+user_pname12!: 
+user_pass1!: 
+user_pass2!: 
+user_pass3!: 
+user_pass4!: 
+user_pass5!: 
+user_pass6!: 
+user_pass7!: 
+user_pass8!: 
+user_pass9!: 
+user_pass10!: 
+user_pass11!: 
+user_pass12!: 
+user_hash1!: 
+user_hash2!: 
+user_hash3!: 
+user_hash4!: 
+user_hash5!: 
+user_hash6!: 
+user_hash7!: 
+user_hash8!: 
+user_hash9!: 
+user_hash10!: 
+user_hash11!: 
+user_hash12!: 
+user_q1!: 1.0
+user_q2!: 1.0
+user_q3!: 1.0
+user_q4!: 1.0
+user_q5!: 1.0
+user_q6!: 1.0
+user_q7!: 1.0
+user_q8!: 1.0
+user_q9!: 1.0
+user_q10!: 1.0
+user_q11!: 1.0
+user_q12!: 1.0
+user_expiry1!: 3600
+user_expiry2!: 3600
+user_expiry3!: 3600
+user_expiry4!: 3600
+user_expiry5!: 3600
+user_expiry6!: 3600
+user_expiry7!: 3600
+user_expiry8!: 3600
+user_expiry9!: 3600
+user_expiry10!: 3600
+user_expiry11!: 3600
+user_expiry12!: 3600
+user_mailbox1!: 
+user_mailbox2!: 
+user_mailbox3!: 
+user_mailbox4!: 
+user_mailbox5!: 
+user_mailbox6!: 
+user_mailbox7!: 
+user_mailbox8!: 
+user_mailbox9!: 
+user_mailbox10!: 
+user_mailbox11!: 
+user_mailbox12!: 
+user_srtp1!: on
+user_srtp2!: on
+user_srtp3!: on
+user_srtp4!: on
+user_srtp5!: on
+user_srtp6!: on
+user_srtp7!: on
+user_srtp8!: on
+user_srtp9!: on
+user_srtp10!: on
+user_srtp11!: on
+user_srtp12!: on
+user_symmetrical_rtp1!: off
+user_symmetrical_rtp2!: off
+user_symmetrical_rtp3!: off
+user_symmetrical_rtp4!: off
+user_symmetrical_rtp5!: off
+user_symmetrical_rtp6!: off
+user_symmetrical_rtp7!: off
+user_symmetrical_rtp8!: off
+user_symmetrical_rtp9!: off
+user_symmetrical_rtp10!: off
+user_symmetrical_rtp11!: off
+user_symmetrical_rtp12!: off
+user_ice1!: off
+user_ice2!: off
+user_ice3!: off
+user_ice4!: off
+user_ice5!: off
+user_ice6!: off
+user_ice7!: off
+user_ice8!: off
+user_ice9!: off
+user_ice10!: off
+user_ice11!: off
+user_ice12!: off
+user_moh1!: 
+user_moh2!: 
+user_moh3!: 
+user_moh4!: 
+user_moh5!: 
+user_moh6!: 
+user_moh7!: 
+user_moh8!: 
+user_moh9!: 
+user_moh10!: 
+user_moh11!: 
+user_moh12!: 
+user_stream1!: 
+user_stream2!: 
+user_stream3!: 
+user_stream4!: 
+user_stream5!: 
+user_stream6!: 
+user_stream7!: 
+user_stream8!: 
+user_stream9!: 
+user_stream10!: 
+user_stream11!: 
+user_stream12!: 
+user_idle_text1!: abdt10
+user_idle_text2!: 
+user_idle_text3!: 
+user_idle_text4!: 
+user_idle_text5!: 
+user_idle_text6!: 
+user_idle_text7!: 
+user_idle_text8!: 
+user_idle_text9!: 
+user_idle_text10!: 
+user_idle_text11!: 
+user_idle_text12!: 
+user_alert_info1!: 
+user_alert_info2!: 
+user_alert_info3!: 
+user_alert_info4!: 
+user_alert_info5!: 
+user_alert_info6!: 
+user_alert_info7!: 
+user_alert_info8!: 
+user_alert_info9!: 
+user_alert_info10!: 
+user_alert_info11!: 
+user_alert_info12!: 
+user_pic1!: 
+user_pic2!: 
+user_pic3!: 
+user_pic4!: 
+user_pic5!: 
+user_pic6!: 
+user_pic7!: 
+user_pic8!: 
+user_pic9!: 
+user_pic10!: 
+user_pic11!: 
+user_pic12!: 
+user_auto_connect1!: off
+user_auto_connect2!: off
+user_auto_connect3!: off
+user_auto_connect4!: off
+user_auto_connect5!: off
+user_auto_connect6!: off
+user_auto_connect7!: off
+user_auto_connect8!: off
+user_auto_connect9!: off
+user_auto_connect10!: off
+user_auto_connect11!: off
+user_auto_connect12!: off
+user_xml_screen_url1!: 
+user_xml_screen_url2!: 
+user_xml_screen_url3!: 
+user_xml_screen_url4!: 
+user_xml_screen_url5!: 
+user_xml_screen_url6!: 
+user_xml_screen_url7!: 
+user_xml_screen_url8!: 
+user_xml_screen_url9!: 
+user_xml_screen_url10!: 
+user_xml_screen_url11!: 
+user_xml_screen_url12!: 
+user_descr_contact1!: off
+user_descr_contact2!: on
+user_descr_contact3!: on
+user_descr_contact4!: on
+user_descr_contact5!: on
+user_descr_contact6!: on
+user_descr_contact7!: on
+user_descr_contact8!: on
+user_descr_contact9!: on
+user_descr_contact10!: on
+user_descr_contact11!: on
+user_descr_contact12!: on
+cc_token1!: 
+cc_token2!: 
+cc_token3!: 
+cc_token4!: 
+cc_token5!: 
+cc_token6!: 
+cc_token7!: 
+cc_token8!: 
+cc_token9!: 
+cc_token10!: 
+cc_token11!: 
+cc_token12!: 
+user_uid1!: <urn:uuid:562e3f1e-3da2-4be4-a9c2-23931c78d738>
+user_uid2!: 
+user_uid3!: 
+user_uid4!: 
+user_uid5!: 
+user_uid6!: 
+user_uid7!: 
+user_uid8!: 
+user_uid9!: 
+user_uid10!: 
+user_uid11!: 
+user_uid12!: 
+user_sipusername_as_line1!: on
+user_sipusername_as_line2!: off
+user_sipusername_as_line3!: off
+user_sipusername_as_line4!: off
+user_sipusername_as_line5!: off
+user_sipusername_as_line6!: off
+user_sipusername_as_line7!: off
+user_sipusername_as_line8!: off
+user_sipusername_as_line9!: off
+user_sipusername_as_line10!: off
+user_sipusername_as_line11!: off
+user_sipusername_as_line12!: off
+user_proxy_require1!: 
+user_proxy_require2!: 
+user_proxy_require3!: 
+user_proxy_require4!: 
+user_proxy_require5!: 
+user_proxy_require6!: 
+user_proxy_require7!: 
+user_proxy_require8!: 
+user_proxy_require9!: 
+user_proxy_require10!: 
+user_proxy_require11!: 
+user_proxy_require12!: 
+user_shared_line1!: off
+user_shared_line2!: off
+user_shared_line3!: off
+user_shared_line4!: off
+user_shared_line5!: off
+user_shared_line6!: off
+user_shared_line7!: off
+user_shared_line8!: off
+user_shared_line9!: off
+user_shared_line10!: off
+user_shared_line11!: off
+user_shared_line12!: off
+user_dp_str1!: |^([a-zA-Z]%2b:.*)$|\1\2| |^([a-zA-Z0-9&=%2b\$,;?\-_.!~*'()%]%2b@.%2b)|sip:\1| |^([a-zA-Z0-9&=%2b\$,;?\-_.!~*'()%]*)$|sip:\1@\d|
+user_dp_str2!: 
+user_dp_str3!: 
+user_dp_str4!: 
+user_dp_str5!: 
+user_dp_str6!: 
+user_dp_str7!: 
+user_dp_str8!: 
+user_dp_str9!: 
+user_dp_str10!: 
+user_dp_str11!: 
+user_dp_str12!: 
+user_dp_exp1!: ENUM
+user_dp_exp2!: 
+user_dp_exp3!: 
+user_dp_exp4!: 
+user_dp_exp5!: 
+user_dp_exp6!: 
+user_dp_exp7!: 
+user_dp_exp8!: 
+user_dp_exp9!: 
+user_dp_exp10!: 
+user_dp_exp11!: 
+user_dp_exp12!: 
+user_ringer1!: Ringer2
+user_ringer2!: Ringer1
+user_ringer3!: Ringer2
+user_ringer4!: Ringer1
+user_ringer5!: Ringer1
+user_ringer6!: Ringer1
+user_ringer7!: Ringer1
+user_ringer8!: Ringer1
+user_ringer9!: Ringer1
+user_ringer10!: Ringer1
+user_ringer11!: Ringer1
+user_ringer12!: Ringer1
+user_custom1!: 
+user_custom2!: 
+user_custom3!: 
+user_custom4!: 
+user_custom5!: 
+user_custom6!: 
+user_custom7!: 
+user_custom8!: 
+user_custom9!: 
+user_custom10!: 
+user_custom11!: 
+user_custom12!: 
+user_outbound1!: 
+user_outbound2!: 
+user_outbound3!: 
+user_outbound4!: 
+user_outbound5!: 
+user_outbound6!: 
+user_outbound7!: 
+user_outbound8!: 
+user_outbound9!: 
+user_outbound10!: 
+user_outbound11!: 
+user_outbound12!: 
+codec1_name1!: 0
+codec1_name2!: 0
+codec1_name3!: 0
+codec1_name4!: 0
+codec1_name5!: 0
+codec1_name6!: 0
+codec1_name7!: 0
+codec1_name8!: 0
+codec1_name9!: 0
+codec1_name10!: 0
+codec1_name11!: 0
+codec1_name12!: 0
+codec2_name1!: 8
+codec2_name2!: 8
+codec2_name3!: 8
+codec2_name4!: 8
+codec2_name5!: 8
+codec2_name6!: 8
+codec2_name7!: 8
+codec2_name8!: 8
+codec2_name9!: 8
+codec2_name10!: 8
+codec2_name11!: 8
+codec2_name12!: 8
+codec3_name1!: 9
+codec3_name2!: 9
+codec3_name3!: 9
+codec3_name4!: 9
+codec3_name5!: 9
+codec3_name6!: 9
+codec3_name7!: 9
+codec3_name8!: 9
+codec3_name9!: 9
+codec3_name10!: 9
+codec3_name11!: 9
+codec3_name12!: 9
+codec4_name1!: 2
+codec4_name2!: 2
+codec4_name3!: 2
+codec4_name4!: 2
+codec4_name5!: 2
+codec4_name6!: 2
+codec4_name7!: 2
+codec4_name8!: 2
+codec4_name9!: 2
+codec4_name10!: 2
+codec4_name11!: 2
+codec4_name12!: 2
+codec5_name1!: 3
+codec5_name2!: 3
+codec5_name3!: 3
+codec5_name4!: 3
+codec5_name5!: 3
+codec5_name6!: 3
+codec5_name7!: 3
+codec5_name8!: 3
+codec5_name9!: 3
+codec5_name10!: 3
+codec5_name11!: 3
+codec5_name12!: 3
+codec6_name1!: 18
+codec6_name2!: 18
+codec6_name3!: 18
+codec6_name4!: 18
+codec6_name5!: 18
+codec6_name6!: 18
+codec6_name7!: 18
+codec6_name8!: 18
+codec6_name9!: 18
+codec6_name10!: 18
+codec6_name11!: 18
+codec6_name12!: 18
+codec7_name1!: 4
+codec7_name2!: 4
+codec7_name3!: 4
+codec7_name4!: 4
+codec7_name5!: 4
+codec7_name6!: 4
+codec7_name7!: 4
+codec7_name8!: 4
+codec7_name9!: 4
+codec7_name10!: 4
+codec7_name11!: 4
+codec7_name12!: 4
+codec_size1!: 20
+codec_size2!: 20
+codec_size3!: 20
+codec_size4!: 20
+codec_size5!: 20
+codec_size6!: 20
+codec_size7!: 20
+codec_size8!: 20
+codec_size9!: 20
+codec_size10!: 20
+codec_size11!: 20
+codec_size12!: 20
+stun_server1!: 
+stun_server2!: 
+stun_server3!: 
+stun_server4!: 
+stun_server5!: 
+stun_server6!: 
+stun_server7!: 
+stun_server8!: 
+stun_server9!: 
+stun_server10!: 
+stun_server11!: 
+stun_server12!: 
+stun_binding_interval1!: 10
+stun_binding_interval2!: 
+stun_binding_interval3!: 
+stun_binding_interval4!: 
+stun_binding_interval5!: 
+stun_binding_interval6!: 
+stun_binding_interval7!: 
+stun_binding_interval8!: 
+stun_binding_interval9!: 
+stun_binding_interval10!: 
+stun_binding_interval11!: 
+stun_binding_interval12!: 
+keepalive_interval1!: 180
+keepalive_interval2!: 
+keepalive_interval3!: 
+keepalive_interval4!: 
+keepalive_interval5!: 
+keepalive_interval6!: 
+keepalive_interval7!: 
+keepalive_interval8!: 
+keepalive_interval9!: 
+keepalive_interval10!: 
+keepalive_interval11!: 
+keepalive_interval12!: 
+record_missed_calls1!: off
+record_missed_calls2!: on
+record_missed_calls3!: on
+record_missed_calls4!: on
+record_missed_calls5!: on
+record_missed_calls6!: on
+record_missed_calls7!: on
+record_missed_calls8!: on
+record_missed_calls9!: on
+record_missed_calls10!: on
+record_missed_calls11!: on
+record_missed_calls12!: on
+fkey0!: line
+fkey1!: line
+fkey2!: line
+fkey3!: line
+fkey4!: line
+fkey5!: dest <sip:1000@64.125.187.9;user=phone;intercom=true>
+fkey6!: recorder
+fkey7!: dest
+fkey8!: dest
+fkey9!: dest
+fkey10!: dest
+fkey11!: line
+fkey_context0!: 1
+fkey_context1!: 1
+fkey_context2!: 1
+fkey_context3!: 1
+fkey_context4!: 2
+fkey_context5!: 1
+fkey_context6!: 1
+fkey_context7!: 1
+fkey_context8!: 1
+fkey_context9!: 1
+fkey_context10!: 1
+fkey_context11!: 2
+tn_0!: 
+tn_1!: 
+tn_2!: 
+tn_3!: 
+tn_4!: 
+tn_5!: 
+tn_6!: 
+tn_7!: 
+tn_8!: 
+tn_9!: 
+tn_10!: 
+tn_11!: 
+tn_12!: 
+tn_13!: 
+tn_14!: 
+tn_15!: 
+tn_16!: 
+tn_17!: 
+tn_18!: 
+tn_19!: 
+tn_20!: 
+tn_21!: 
+tn_22!: 
+tn_23!: 
+tn_24!: 
+tn_25!: 
+tn_26!: 
+tn_27!: 
+tn_28!: 
+tn_29!: 
+tn_30!: 
+tn_31!: 
+tn_32!: 
+tn_33!: 
+tn_34!: 
+tn_35!: 
+tn_36!: 
+tn_37!: 
+tn_38!: 
+tn_39!: 
+tn_40!: 
+tn_41!: 
+tn_42!: 
+tn_43!: 
+tn_44!: 
+tn_45!: 
+tn_46!: 
+tn_47!: 
+tn_48!: 
+tn_49!: 
+tn_50!: 
+tn_51!: 
+tn_52!: 
+tn_53!: 
+tn_54!: 
+tn_55!: 
+tn_56!: 
+tn_57!: 
+tn_58!: 
+tn_59!: 
+tn_60!: 
+tn_61!: 
+tn_62!: 
+tn_63!: 
+tn_64!: 
+tn_65!: 
+tn_66!: 
+tn_67!: 
+tn_68!: 
+tn_69!: 
+tn_70!: 
+tn_71!: 
+tn_72!: 
+tn_73!: 
+tn_74!: 
+tn_75!: 
+tn_76!: 
+tn_77!: 
+tn_78!: 
+tn_79!: 
+tn_80!: 
+tn_81!: 
+tn_82!: 
+tn_83!: 
+tn_84!: 
+tn_85!: 
+tn_86!: 
+tn_87!: 
+tn_88!: 
+tn_89!: 
+tn_90!: 
+tn_91!: 
+tn_92!: 
+tn_93!: 
+tn_94!: 
+tn_95!: 
+tn_96!: 
+tn_97!: 
+tn_98!: 
+tn_99!: 
+tu_0!: 
+tu_1!: 
+tu_2!: 
+tu_3!: 
+tu_4!: 
+tu_5!: 
+tu_6!: 
+tu_7!: 
+tu_8!: 
+tu_9!: 
+tu_10!: 
+tu_11!: 
+tu_12!: 
+tu_13!: 
+tu_14!: 
+tu_15!: 
+tu_16!: 
+tu_17!: 
+tu_18!: 
+tu_19!: 
+tu_20!: 
+tu_21!: 
+tu_22!: 
+tu_23!: 
+tu_24!: 
+tu_25!: 
+tu_26!: 
+tu_27!: 
+tu_28!: 
+tu_29!: 
+tu_30!: 
+tu_31!: 
+tu_32!: 
+tu_33!: 
+tu_34!: 
+tu_35!: 
+tu_36!: 
+tu_37!: 
+tu_38!: 
+tu_39!: 
+tu_40!: 
+tu_41!: 
+tu_42!: 
+tu_43!: 
+tu_44!: 
+tu_45!: 
+tu_46!: 
+tu_47!: 
+tu_48!: 
+tu_49!: 
+tu_50!: 
+tu_51!: 
+tu_52!: 
+tu_53!: 
+tu_54!: 
+tu_55!: 
+tu_56!: 
+tu_57!: 
+tu_58!: 
+tu_59!: 
+tu_60!: 
+tu_61!: 
+tu_62!: 
+tu_63!: 
+tu_64!: 
+tu_65!: 
+tu_66!: 
+tu_67!: 
+tu_68!: 
+tu_69!: 
+tu_70!: 
+tu_71!: 
+tu_72!: 
+tu_73!: 
+tu_74!: 
+tu_75!: 
+tu_76!: 
+tu_77!: 
+tu_78!: 
+tu_79!: 
+tu_80!: 
+tu_81!: 
+tu_82!: 
+tu_83!: 
+tu_84!: 
+tu_85!: 
+tu_86!: 
+tu_87!: 
+tu_88!: 
+tu_89!: 
+tu_90!: 
+tu_91!: 
+tu_92!: 
+tu_93!: 
+tu_94!: 
+tu_95!: 
+tu_96!: 
+tu_97!: 
+tu_98!: 
+tu_99!: 
+tk_0!: 
+tk_1!: 
+tk_2!: 
+tk_3!: 
+tk_4!: 
+tk_5!: 
+tk_6!: 
+tk_7!: 
+tk_8!: 
+tk_9!: 
+tk_10!: 
+tk_11!: 
+tk_12!: 
+tk_13!: 
+tk_14!: 
+tk_15!: 
+tk_16!: 
+tk_17!: 
+tk_18!: 
+tk_19!: 
+tk_20!: 
+tk_21!: 
+tk_22!: 
+tk_23!: 
+tk_24!: 
+tk_25!: 
+tk_26!: 
+tk_27!: 
+tk_28!: 
+tk_29!: 
+tk_30!: 
+tk_31!: 
+tk_32!: 
+tk_33!: 
+tk_34!: 
+tk_35!: 
+tk_36!: 
+tk_37!: 
+tk_38!: 
+tk_39!: 
+tk_40!: 
+tk_41!: 
+tk_42!: 
+tk_43!: 
+tk_44!: 
+tk_45!: 
+tk_46!: 
+tk_47!: 
+tk_48!: 
+tk_49!: 
+tk_50!: 
+tk_51!: 
+tk_52!: 
+tk_53!: 
+tk_54!: 
+tk_55!: 
+tk_56!: 
+tk_57!: 
+tk_58!: 
+tk_59!: 
+tk_60!: 
+tk_61!: 
+tk_62!: 
+tk_63!: 
+tk_64!: 
+tk_65!: 
+tk_66!: 
+tk_67!: 
+tk_68!: 
+tk_69!: 
+tk_70!: 
+tk_71!: 
+tk_72!: 
+tk_73!: 
+tk_74!: 
+tk_75!: 
+tk_76!: 
+tk_77!: 
+tk_78!: 
+tk_79!: 
+tk_80!: 
+tk_81!: 
+tk_82!: 
+tk_83!: 
+tk_84!: 
+tk_85!: 
+tk_86!: 
+tk_87!: 
+tk_88!: 
+tk_89!: 
+tk_90!: 
+tk_91!: 
+tk_92!: 
+tk_93!: 
+tk_94!: 
+tk_95!: 
+tk_96!: 
+tk_97!: 
+tk_98!: 
+tk_99!: 
+tc_0!: 
+tc_1!: 
+tc_2!: 
+tc_3!: 
+tc_4!: 
+tc_5!: 
+tc_6!: 
+tc_7!: 
+tc_8!: 
+tc_9!: 
+tc_10!: 
+tc_11!: 
+tc_12!: 
+tc_13!: 
+tc_14!: 
+tc_15!: 
+tc_16!: 
+tc_17!: 
+tc_18!: 
+tc_19!: 
+tc_20!: 
+tc_21!: 
+tc_22!: 
+tc_23!: 
+tc_24!: 
+tc_25!: 
+tc_26!: 
+tc_27!: 
+tc_28!: 
+tc_29!: 
+tc_30!: 
+tc_31!: 
+tc_32!: 
+tc_33!: 
+tc_34!: 
+tc_35!: 
+tc_36!: 
+tc_37!: 
+tc_38!: 
+tc_39!: 
+tc_40!: 
+tc_41!: 
+tc_42!: 
+tc_43!: 
+tc_44!: 
+tc_45!: 
+tc_46!: 
+tc_47!: 
+tc_48!: 
+tc_49!: 
+tc_50!: 
+tc_51!: 
+tc_52!: 
+tc_53!: 
+tc_54!: 
+tc_55!: 
+tc_56!: 
+tc_57!: 
+tc_58!: 
+tc_59!: 
+tc_60!: 
+tc_61!: 
+tc_62!: 
+tc_63!: 
+tc_64!: 
+tc_65!: 
+tc_66!: 
+tc_67!: 
+tc_68!: 
+tc_69!: 
+tc_70!: 
+tc_71!: 
+tc_72!: 
+tc_73!: 
+tc_74!: 
+tc_75!: 
+tc_76!: 
+tc_77!: 
+tc_78!: 
+tc_79!: 
+tc_80!: 
+tc_81!: 
+tc_82!: 
+tc_83!: 
+tc_84!: 
+tc_85!: 
+tc_86!: 
+tc_87!: 
+tc_88!: 
+tc_89!: 
+tc_90!: 
+tc_91!: 
+tc_92!: 
+tc_93!: 
+tc_94!: 
+tc_95!: 
+tc_96!: 
+tc_97!: 
+tc_98!: 
+tc_99!: 
+to_0!: active
+to_1!: 
+to_2!: 
+to_3!: 
+to_4!: 
+to_5!: 
+to_6!: 
+to_7!: 
+to_8!: 
+to_9!: 
+to_10!: 
+to_11!: 
+to_12!: 
+to_13!: 
+to_14!: 
+to_15!: 
+to_16!: 
+to_17!: 
+to_18!: 
+to_19!: 
+to_20!: 
+to_21!: 
+to_22!: 
+to_23!: 
+to_24!: 
+to_25!: 
+to_26!: 
+to_27!: 
+to_28!: 
+to_29!: 
+to_30!: 
+to_31!: 
+to_32!: 
+to_33!: 
+to_34!: 
+to_35!: 
+to_36!: 
+to_37!: 
+to_38!: 
+to_39!: 
+to_40!: 
+to_41!: 
+to_42!: 
+to_43!: 
+to_44!: 
+to_45!: 
+to_46!: 
+to_47!: 
+to_48!: 
+to_49!: 
+to_50!: 
+to_51!: 
+to_52!: 
+to_53!: 
+to_54!: 
+to_55!: 
+to_56!: 
+to_57!: 
+to_58!: 
+to_59!: 
+to_60!: 
+to_61!: 
+to_62!: 
+to_63!: 
+to_64!: 
+to_65!: 
+to_66!: 
+to_67!: 
+to_68!: 
+to_69!: 
+to_70!: 
+to_71!: 
+to_72!: 
+to_73!: 
+to_74!: 
+to_75!: 
+to_76!: 
+to_77!: 
+to_78!: 
+to_79!: 
+to_80!: 
+to_81!: 
+to_82!: 
+to_83!: 
+to_84!: 
+to_85!: 
+to_86!: 
+to_87!: 
+to_88!: 
+to_89!: 
+to_90!: 
+to_91!: 
+to_92!: 
+to_93!: 
+to_94!: 
+to_95!: 
+to_96!: 
+to_97!: 
+to_98!: 
+to_99!: 
+speed0!: 
+speed1!: 
+speed2!: 
+speed3!: 
+speed4!: 
+speed5!: 
+speed6!: 
+speed7!: 
+speed8!: 
+speed9!: 
+speed10!: 
+speed11!: 
+speed12!: 
+speed13!: 
+speed14!: 
+speed15!: 
+speed16!: 
+speed17!: 
+speed18!: 
+speed19!: 
+speed20!: 
+speed21!: 
+speed22!: 
+speed23!: 
+speed24!: 
+speed25!: 
+speed26!: 
+speed27!: 
+speed28!: 
+speed29!: 
+speed30!: 
+speed31!: 
+speed32!: 
+auth_tmp_pass1!: 
+auth_tmp_pass2!: 
+auth_tmp_pass3!: 
+auth_tmp_pass4!: 
+auth_tmp_pass5!: 
+auth_tmp_pass6!: 
+auth_tmp_pass7!: 
+auth_tmp_pass8!: 
+auth_tmp_pass9!: 
+auth_tmp_pass10!: 
+auth_tmp_pass11!: 
+auth_tmp_pass12!: 
+auth_tmp_realm1!: 
+auth_tmp_realm2!: 
+auth_tmp_realm3!: 
+auth_tmp_realm4!: 
+auth_tmp_realm5!: 
+auth_tmp_realm6!: 
+auth_tmp_realm7!: 
+auth_tmp_realm8!: 
+auth_tmp_realm9!: 
+auth_tmp_realm10!: 
+auth_tmp_realm11!: 
+auth_tmp_realm12!: 
+user_dtmf_info1!: off
+user_dtmf_info2!: off
+user_dtmf_info3!: off
+user_dtmf_info4!: off
+user_dtmf_info5!: off
+user_dtmf_info6!: off
+user_dtmf_info7!: off
+user_dtmf_info8!: off
+user_dtmf_info9!: off
+user_dtmf_info10!: off
+user_dtmf_info11!: off
+user_dtmf_info12!: off
+
+</pre>
+</html>

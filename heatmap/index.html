@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.states {
+  fill: none;
+  stroke: #ffff;
+  stroke-linejoin: round;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+var width = 960,
+    height = 500,
+    centered,
+    g;
+
+var color = d3.scale.threshold()
+//    .domain([-30,-2,-1,-0.5,0,0.5,1,2,30])
+//    .range(["#00FF00","#44FF00","#AAFF00","#CCFF00","#FFFF00", "#FFCC00", "#FFAA00", "#FF4400", "#FF0000"]);
+    .domain([1.5,2,3,10])
+    .range(["#F2E3E6","#F0BAAF", "#EF9179",  "#EE6842", "#ED3F0C"]);
+//    .range(["#00FF00","#FFFF00", "#FF4400",  "#FF0000", "#FF0000"]);
+
+var projection = d3.geo.albersUsa()
+    .scale(1070)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+queue()
+    .defer(d3.json, "us.json")
+    .defer(d3.tsv, "disease.tsv")
+    .await(ready);
+
+function ready(error, us, unemployment) {
+  var rateById = {};
+
+  unemployment.forEach(function(d) { rateById[d.county_fips] = d; });
+//  console.log(JSON.stringify(rateById));
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a.id !== b.id; }))
+      .attr("class", "states")
+      .attr("d", path);
+
+  g = svg.append("g")
+      .attr("class", "counties")
+    .selectAll("path")
+      .data(topojson.feature(us, us.objects.counties).features)
+    .enter().append("path")
+      .attr("d", path)
+      .style("stroke", "#aaaaaa")
+//      .style("visibility", "hidden")
+      .style("fill", function(d) { return rateById[d.id] == undefined? "#cccccc":color(rateById[d.id].score);})
+    .on("click", clicked)
+   .append("svg:title")
+        .text(function(d) { return  rateById[d.id] == undefined?"":rateById[d.id].county + ', '+rateById[d.id].state+'\nTweets in 7 Days: '+rateById[d.id].tweets+'\nScore: '+rateById[d.id].score; });
+;
+/*
+  svg.append("g")
+      .attr("class", "counties2")
+    .selectAll("path")
+      .data(topojson.feature(us, us.objects.counties).features)
+    .enter().append("path")
+      .attr("d", path)
+      .style("stroke", "#aaaaaa")
+//      .style("visibility", "hidden")
+      .style("fill", function(d) { return rateById[d.id] == undefined? "#cccccc":"black";});
+
+  svg.append("g")
+      .attr("class", "counties3")
+    .selectAll("path")
+      .data(topojson.feature(us, us.objects.counties).features)
+    .enter().append("path")
+      .attr("d", path)
+      .style("stroke", "#aaaaaa")
+//      .style("visibility", "hidden")
+      .style("fill", function(d) { return rateById[d.id] == undefined? "#cccccc":"blue";});
+
+  $(".counties2").fadeOut(2000);
+  $(".counties3").fadeOut(2000);
+//  $(".counties").delay("fast").fadeIn();//style("visibility","hidden");
+*/
+}
+
+  function click(d) {
+	debugger;
+//	console.log(d3.event);
+}
+  function redraw() {
+	console.log("zooming");
+	console.log(d3.event.translate );
+	console.log(d3.event.scale );
+	console.log("translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+
+//    svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    svg.attr("transform", "scale(" + d3.event.scale + ")");
+    svg.select(".states").style("stroke-width", 1.5 / d3.event.scale + "px");
+    svg.select(".counties").style("stroke-width", .5 / d3.event.scale + "px");
+  }
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+</script>

@@ -1,0 +1,18 @@
+use nowtracking
+
+#SELECT 'DISEASE', 'DATE', 'COUNTY_FIPS', 'NORMAVG', 'TWEETS', 'TOT_DAYS'
+SELECT 'county_fips', 'normavg','tweets','tot_days', 'county', 'state'
+UNION ALL
+#SELECT DISEASE,t.DATE,t.COUNTY_FIPS, t.NORMAVG, t.tweets, t.tot_days 
+SELECT t.COUNTY_FIPS, t.NORMAVG , t.tweets, t.tot_days,c.COUNTY_NAME_LONG, s.STATE_ALPHA
+INTO OUTFILE '/tmp/disease.tsv'
+FIELDS TERMINATED BY '\t' #OPTIONALLY ENCLOSED BY '"' 
+LINES TERMINATED BY '\n'
+
+FROM `TRENDS` t
+inner join DISEASE d on d.DIS_ID = t.DIS_ID and DISEASE = 'Influenza'
+INNER JOIN POP_PLACES_COUNTY c on c.COUNTY_FIPS = t.COUNTY_FIPS
+INNER JOIN POP_PLACES_STATE s on s.STATE_FIPS = c.STATE_FIPS
+WHERE t.COUNTY_FIPS is NOT NULL and DATE = CURDATE() - interval 1 day
+#ORDER BY COUNTY_FIPS
+

@@ -1,0 +1,17 @@
+p {  font-family: Arial, Helvetica, sans-serif}
+h1 {  font-family: Geneva, Arial, Helvetica, san-serif; font-style: italic}
+h2 {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-style: italic;
+	text-decoration: none;
+}
+h3 {  font-family: Arial, Helvetica, sans-serif}
+h4 {  }
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+h5 {  font-family: Arial, Helvetica, sans-serif}
+h6 {  font-family: Arial, Helvetica, sans-serif}

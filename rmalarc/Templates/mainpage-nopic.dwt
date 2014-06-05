@@ -1,0 +1,48 @@
+<html>
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>AB Digital Technologies - </title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html;">
+<link rel="stylesheet" href="/rmalarc/images/style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+  <tr> 
+      <td width="600">&nbsp;</td> 
+    <td><img name="header" src="/rmalarc/images/header.gif" width="900" height="74" border="0" usemap="#headerMap" alt="ab digital technologies - the asterisk experts in NY"></td>    
+    <td width="600">&nbsp;</td> 
+  </tr>
+  <tr>     <td width="600" background="/rmalarc/images/menu_bg.gif">&nbsp;</td> 
+    <td><img name="menu" src="/rmalarc/images/menu.gif" width="900" height="21" border="0" usemap="#menuMap"></td>
+  <td width="600" background="/rmalarc/images/menu_bg.gif">&nbsp;</td>   </tr>
+  <tr> 
+      <td width="600">&nbsp;</td> 
+    <td bgcolor="#999999" background="/rmalarc/images/main_bg.gif"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="15">
+        <tr> 
+          <td> <!-- #BeginEditable "body" -->
+            <h1>{body}</h1>
+            <!-- #EndEditable --> </td>
+        </tr>
+      </table>
+    </td>
+	    <td width="600">&nbsp;</td> 
+  </tr>
+  <tr> 
+      <td width="600">&nbsp;</td> 
+    <td><img name="footer" src="/rmalarc/images/footer.gif" width="900" height="90" border="0" alt="ab digital technologies - the asterisk experts in NY"></td>
+    <td width="600">&nbsp;</td> 
+  </tr>
+</table>
+<map name="menuMap">
+  <area shape="rect" coords="4,1,55,20" href="/rmalarc/">
+  <area shape="rect" coords="63,1,130,20" href="/rmalarc/services.htm">
+  <area shape="rect" coords="138,1,202,20" href="/rmalarc/contact.htm">
+  <area shape="rect" coords="208,1,281,20" href="/rmalarc/about.htm">
+</map>
+<map name="headerMap">
+  <area shape="rect" coords="9,6,315,70" href="/rmalarc/">
+</map>
+</body>
+</html>

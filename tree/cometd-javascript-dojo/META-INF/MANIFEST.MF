@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: simon
+Build-Jdk: 1.7.0_04
+Tool: Bnd-1.43.0
+Bundle-Name: CometD :: JavaScript :: Dojo
+Bundle-Vendor: Dojo Foundation
+Bundle-ContactAddress: http://cometd.org/cometd-javascript-project/com
+ etd-javascript-dojo
+Bundle-Version: 2.5.1
+Bnd-LastModified: 1353713797749
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0, http://www
+ .opensource.org/licenses/bsd-license.html, http://opensource-definiti
+ on.org/licenses/afl-2.1.html
+Bundle-Description: The CometD project is a scalable web messaging bus
+  that uses WebSocketand HTTP AJAX push technology patterns known as "
+ Comet" techniques
+Bundle-DocURL: http://docs.cometd.org
+Bundle-SymbolicName: cometd-javascript-dojo
+

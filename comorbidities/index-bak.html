@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.lo-node {
+  stroke: #333333;
+  fill: #333333;
+  opacity: .1;
+}
+
+.hi-node {
+  stroke: #333333;
+  stroke-opacity: .5;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .7;
+}
+
+.lo-link {
+  stroke: #CCCCCC;
+  stroke-opacity: .3;
+}
+
+.hi-link {
+  stroke: #000000;
+  stroke-opacity: .5;
+}
+
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+//debugger;
+var width = 1000,
+    height = 600;
+
+var nodeClick = 0;
+var color = d3.scale.category20();
+
+var force = d3.layout.force()
+    .charge(0)
+    .linkDistance(40)
+    .size([width, height]);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("pointer-events", "all")
+    .append('svg:g')
+    .call(d3.behavior.zoom().on("zoom", redraw));
+
+    d3.select("body").on("click",  function(d) {
+//			console.log(JSON.stringify(d));
+	if (nodeClick == 0){
+            svg.selectAll(".hi-node, .lo-node")
+//	        .transition()
+                .attr("class", "node");
+            svg.selectAll(".hi-link, .lo-link")
+//	        .transition()
+                .attr("class", "link");
+	} else {
+	    nodeClick = 0;
+	}
+        });
+
+
+//start
+
+svg.append('svg:rect')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('fill', 'white');
+
+function redraw() {
+//  console.log("here", d3.event.translate, d3.event.scale);
+  svg.attr("transform",
+//      "translate(" + d3.event.translate + ")"
+//      + 
+" scale(" + d3.event.scale + ")");
+}
+
+//end
+
+//function reload(){
+d3.json("comorbidities.json", function(error, graph) {
+  force
+      .nodes(graph.nodes)
+      .links(graph.links)
+
+	.gravity(2)
+	.linkDistance(80)
+	.charge(-3000)
+//	.linkStrength(function(x) {return 2})
+//	.linkStrength(function(x) {return x.weight * 2})
+/**/      .start();
+
+  var link = svg.selectAll(".link")
+      .data(graph.links)
+    .enter().append("line")
+      .attr("class", "link")
+//      .style("stroke-width", function(d) { return Math.round(Math.sqrt(d.value)); });
+      .style("stroke-width", function(d) { return d.value*0.75; });
+//      .style("stroke-width", 0.75);
+
+  var node = svg.selectAll(".node")
+      .data(graph.nodes)
+      .enter().append("circle")
+      .attr("class", "node")
+      .attr("r", function(d) { return d.radius<5?3:d.radius*.6; })
+      .style("fill", function(d) { return color(d.radius); })
+      .call(force.drag);
+
+   node.append("svg:title")
+        .text(function(d) { return d.name; });
+/*
+node.append("svg:text")
+    .attr("dx", 12)
+    .attr("dy", ".35em")
+    .text(function(d) { return d.name });
+*/
+/*
+var text = svg.append("g")
+    .attr("class", "labels")
+  .selectAll("text")
+    .data(nodes)
+  .enter().append("text")
+    .attr("dx", 12)
+    .attr("dy", ".35em")
+    .text(function(d) { return d.name });
+*/
+	node.on("click", function(d,i) {
+//	if (d3.event.defaultPrevented) return; // ignore drag
+	    nodeClick = 1;
+//	    var selectedNode = d3.select(this);
+	    console.log(JSON.stringify(d));
+
+	    svg.selectAll(".node, .hi-node")
+	        //.transition()
+ 	        .attr("class", "lo-node");
+
+	    svg.selectAll(".link, .hi-link")
+	        //.transition()
+ 	        .attr("class", "lo-link");
+
+            var associated_links = svg.selectAll("line")
+		.filter(function(d1) {
+                	return d1.source.index == i || d1.target.index == i;// ||d.index == i;
+            		})
+		.each(function(dLink, iLink) {
+			//console.log(JSON.stringify(dLink));
+			//console.log(JSON.stringify(iLink));
+                	//unfade links and nodes connected to the current node
+                	d3.selectAll(".lo-node")
+			  .filter( function(o) {
+		   		return o.index === dLink.source.index || o.index === dLink.target.index;
+		 		})
+		          .transition()
+	 	          .attr("class", "hi-node");
+//	  	          .style("fill", function(d) { return color(d.radius); })
+//  		          .style("opacity", 1);
+
+                	d3.selectAll(".lo-link")
+			  .filter( function(o) {
+		   		return o === dLink;
+		 		})
+	        	  .transition()
+	    	          .attr("class", "hi-link");
+            		});
+
+
+	return;
+//	    svg.selectAll(d.childNodes)
+	    svg.selectAll(".node")
+	        .filter(function(d2) { return d2.index == d.index; })
+	        .transition()
+        	.style("opacity", 1);
+
+	    svg.selectAll(".link")
+//	        .filter(function(d1) { return d1.source.index == d.index || d1.target.index == d.index; })
+	        .filter(function(d1) {
+//			    svg.selectAll(".node")
+//	        		.filter(function(d2) { return d2.index == d1.source.index|| d2.index == d1.target.index; })
+//			        .transition()
+//		        	.style("opacity", 1);
+			return d1.source.index != i && d1.target.index != i; })
+	        .filter(function(d1) { return d1.index != d.index; })
+	        .transition()
+        	.style("opacity", 1);
+
+//		reload();
+//		console.log(JSON.stringify(svg.selection.attr("target",d.index)));
+//			console.log(.links(graph.links)
+//		alert(d.index);
+//		force.gravity(d.index);
+//		force.charge(-3000);
+//		force.gravity(10);
+});
+
+  force.on("tick", function() {
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node.attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+  });
+});
+//};
+//reload();
+</script>
+</body>

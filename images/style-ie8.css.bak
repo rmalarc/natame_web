@@ -1,0 +1,157 @@
+p {  font-family: Arial, Helvetica, sans-serif}
+h1 {  font-family: Geneva, Arial, Helvetica, san-serif; font-style: italic}
+h2 {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-style: italic;
+	text-decoration: none;
+}
+h3 {  font-family: Arial, Helvetica, sans-serif}
+h4 {  }
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFEBE6;
+	margin: 0px;
+	padding: 0px;
+}
+h5 {  font-family: Arial, Helvetica, sans-serif}
+h6 {  font-family: Arial, Helvetica, sans-serif}
+
+.style2 {color: #FF5328}
+.style4 {font-size: small}
+.style1 {
+	font-size: normal;
+	font-weight: bold;
+	font-style: italic;
+	color: #000000;
+	margin: 15px;
+}
+.cellunderlined {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+}
+.menustyle {
+	font-size: normal;
+	font-weight: bold;
+	color: #000000;
+	padding: 2px;
+}
+body {
+text-align: center
+}
+#header {
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "900px" : (document.body.clientWidth*0.75) +"px" );
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+/*	width: 900px;*/
+	background-color: #FFFFFF;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+#navmenu {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "900px" : (document.body.clientWidth*0.75) +"px" );
+	background-color: #FF5328;
+	border-style: solid;
+	border-width: 1px;
+}
+#menuimg {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "900px" : (document.body.clientWidth*0.75) +"px" );
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+#title{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+    	font-size: normal;
+    	font-weight: bold;
+    	font-style: italic;
+	color: #FF5328;
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "900px" : (document.body.clientWidth*0.75) +"px" );
+	background-color: #FFC9BB;
+	border-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	white-space:nowrap;
+}
+#pagemenu{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	background-color: #CCCCCC;
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "900px" : (document.body.clientWidth*0.75) +"px" );
+	border-style: solid;
+	border-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	white-space:nowrap;
+}
+#map{
+	float: left;
+	display: inline;
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "599px" : (document.body.clientWidth*0.75*0.6-1) +"px" );
+/*	width: 60%;*/
+/*	height : 400px;*/
+	height: expression( (document.body.clientHeight) < 600 ? "400px" : (document.body.clientHeight*0.7) +"px" );
+	background-color: #FFFFFF;
+	vertical-align:middle;
+	text-align:center;
+}
+#tweetdiv{
+	background-color: #DDDDDD;
+	float: left;
+	display: inline;
+	white-space:normal;
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "298px" : (document.body.clientWidth*0.75*0.4-2) +"px" );
+/*	width: 40%;*/
+/*	height : 400px;*/
+	height: expression( (document.body.clientHeight) < 600 ? "400px" : (document.body.clientHeight*0.7) +"px" );
+	overflow-y:scroll;
+	overflow-x: hidden;
+        background-image: url(/images/loading.gif);
+        background-repeat: no-repeat;
+        background-position: center center;
+}
+
+#wrapper{
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "900px" : (document.body.clientWidth*0.75) +"px" );
+	white-space:nowrap;
+
+/*	width: 900px;*/
+	text-align: left;
+	height : 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	border-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+
+
+#footer{
+	text-align: left;
+	clear : both;
+	border-style: solid;
+	border-width: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	width: expression( (document.body.clientWidth*0.75) < 901 ? "900px" : (document.body.clientWidth*0.75) +"px" );
+	height:80px;
+	background-color: #FF5328;
+}

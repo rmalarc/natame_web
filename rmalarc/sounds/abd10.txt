@@ -1,0 +1,55 @@
+# example snom settings file
+
+# After each setting (before the colon) you can set a flag, which means respectively:
+# ! means writeable by the user, but will not overwrite existing 
+# $ means writeable by the user, but will overwrite existing (available since version 4.2)
+# & (or no flag) means read only, but will overwrite existing
+
+# more settings can be found at the settings (dump) page of the phone's build in webinterface
+ 
+# Language and Time settings
+ 
+language$: English
+web_language$: English
+timezone$: USA-5
+date_us_format&: on
+time_24_format&: off
+user_idle_text1$: 10
+setting_server$: http://www.abdigitaltechnologies.com/sounds/abd10.txt
+update_policy$: auto_update
+firmware_status: http://provisioning.snom.com/release/firmware.php
+
+
+tone_scheme$: USA
+answer_after_policy$: idle
+auto_dial$: 5
+
+# First account
+
+user_pname1$: abdigital10
+user_pass1$: 39514
+user_name1$: abdigital10
+user_realname1$: abdigital10
+#user_host1$: 192.168.1.90
+user_host1$: 192.168.1.90
+user_srtp1$: off
+record_missed_calls1$: off
+keepalive_interval1$: 120
+user_expiry1$: 3600
+
+
+# user_dp_str1$: !([^#]%2b)#!sip:\1@\d!d
+
+# You may add up to 12 accounts
+
+fkey5$: 
+fkey11$:
+
+# set second account to active outgoing identity
+active_line$: 1
+
+filter_registrar$: off
+user_phone$: off
+challenge_response$: off
+stun_server1$: 
+stun_binding_interval1$: 10

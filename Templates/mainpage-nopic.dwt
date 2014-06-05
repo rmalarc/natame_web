@@ -1,0 +1,46 @@
+<html>
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Natame - </title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html;">
+<link rel="stylesheet" href="../images/style.css" type="text/css">
+</head>
+<body  onload="load()" onunload="GUnload()">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+  <tr> 
+      <td width="600" bgcolor="#FFFFFF">&nbsp;</td> 
+    <td><img name="header" src="../images/header2.jpg" width="900" height="48" border="0" usemap="#headerMap" alt="Natame Analytics - Disease trends"></td>    
+    <td width="600" bgcolor="#FFFFFF">&nbsp;</td> 
+  </tr>
+  <tr>     <td width="600" background="../images/menu_bg.gif">&nbsp;</td> 
+    <td><img name="menu" src="../images/menu.jpg" width="900" height="21" border="0" usemap="#menuMap"></td>
+  <td width="600" background="../images/menu_bg.gif">&nbsp;</td>   </tr>
+  <tr> 
+      <td width="600">&nbsp;</td> 
+    <td bgcolor="#999999" background="../images/main_bg.gif"> <!-- #BeginEditable "body" -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="15">
+        <tr> 
+          <td> 
+            <h1>{body}</h1>
+            </td>
+        </tr>
+      </table> <!-- #EndEditable -->
+    </td>
+	    <td width="600">&nbsp;</td> 
+  </tr>
+  <tr> 
+      <td width="600">&nbsp;</td> 
+    <td><img name="footer" src="../images/footer.gif" width="900" height="90" border="0" alt="Natame Analytics - Disease trends"></td>
+	    <td width="600">&nbsp;</td> 
+  </tr>
+</table>
+<map name="headerMap">
+  <area shape="rect" coords="13,5,206,44" href="/">
+</map>
+
+<map name="menuMap">
+  <area shape="rect" coords="10,4,113,16" href="/index.php" alt="Contageous disease tracker"><area shape="rect" coords="129,4,229,16" href="/bystate.php" alt="Get details by state of contagious disease twitter traffic">
+<area shape="rect" coords="247,5,286,17" href="about.php" alt="About Natame">
+</map></body>
+</html>
